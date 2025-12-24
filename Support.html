@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MemoWall Support</title>
+  <meta name="description" content="Support, help, and contact information for MemoWall on Apple Vision Pro." />
+  <style>
+    :root{
+      --bg: #0b0b0f;
+      --card: rgba(255,255,255,.08);
+      --card2: rgba(255,255,255,.06);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.68);
+      --hair: rgba(255,255,255,.14);
+      --accent: rgba(255,255,255,.92);
+      --shadow: 0 16px 60px rgba(0,0,0,.45);
+      --radius: 18px;
+      --max: 980px;
+      --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+    }
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      font-family:var(--font);
+      color:var(--text);
+      background:
+        radial-gradient(1200px 700px at 20% 10%, rgba(255,255,255,.10), transparent 60%),
+        radial-gradient(900px 600px at 85% 20%, rgba(255,255,255,.08), transparent 55%),
+        radial-gradient(1200px 800px at 50% 110%, rgba(255,255,255,.06), transparent 55%),
+        var(--bg);
+      letter-spacing: -0.01em;
+    }
+    a{ color:var(--accent); text-decoration:none; border-bottom: 1px solid rgba(255,255,255,.25); }
+    a:hover{ border-bottom-color: rgba(255,255,255,.6); }
+    .wrap{ max-width:var(--max); margin:0 auto; padding: 40px 18px 64px; }
+    header{
+      display:flex; gap:14px; align-items:center; justify-content:space-between;
+      padding: 18px 18px;
+      border: 1px solid var(--hair);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.06));
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+    .brand{
+      display:flex; flex-direction:column; gap:2px;
+      min-width: 0;
+    }
+    .brand h1{
+      font-size: 22px;
+      margin: 0;
+      font-weight: 650;
+      line-height: 1.15;
+    }
+    .brand p{
+      margin:0;
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding: 10px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--hair);
+      background: rgba(255,255,255,.06);
+      white-space:nowrap;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .grid{
+      margin-top: 18px;
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 14px;
+    }
+    @media (max-width: 900px){
+      .grid{ grid-template-columns: 1fr; }
+    }
+    .card{
+      border:1px solid var(--hair);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.06);
+      box-shadow: 0 10px 40px rgba(0,0,0,.35);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      overflow:hidden;
+    }
+    .card .inner{ padding: 18px; }
+    .card h2{
+      font-size: 16px;
+      margin: 0 0 10px;
+      font-weight: 650;
+      letter-spacing: -0.02em;
+    }
+    .card p, .card li{
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+    .card ul{ margin: 10px 0 0; padding-left: 18px; }
+    .card li{ margin: 7px 0; }
+    .btnrow{
+      display:flex; flex-wrap:wrap; gap:10px;
+      margin-top: 12px;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid var(--hair);
+      background: rgba(255,255,255,.07);
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 560;
+      text-decoration:none;
+      box-shadow: 0 8px 22px rgba(0,0,0,.25);
+    }
+    .btn:hover{ background: rgba(255,255,255,.10); }
+    .divider{
+      height:1px; background: var(--hair);
+      margin: 14px 0;
+    }
+    .kv{
+      display:grid;
+      grid-template-columns: 120px 1fr;
+      gap: 10px 12px;
+      align-items:start;
+      margin-top: 10px;
+    }
+    .k{ color: rgba(255,255,255,.55); font-size: 13px; }
+    .v{ color: var(--muted); font-size: 14px; }
+    footer{
+      margin-top: 18px;
+      padding: 16px 6px 0;
+      color: rgba(255,255,255,.55);
+      font-size: 12px;
+      line-height: 1.4;
+    }
+    code.inline{
+      padding: 2px 6px;
+      border-radius: 8px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.80);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 12px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <h1>MemoWall Support</h1>
+        <p>Help, contact, and troubleshooting for MemoWall on Apple Vision Pro.</p>
+      </div>
+      <div class="pill" aria-label="App info">
+        <span>visionOS</span>
+        <span aria-hidden="true">•</span>
+        <span>MemoWall</span>
+      </div>
+    </header>
+
+    <section class="grid" aria-label="Support content">
+      <div class="card">
+        <div class="inner">
+          <h2>Contact</h2>
+          <p>
+            Need help, want to report a bug, or have a feature request? Email us and we’ll get back to you.
+          </p>
+
+          <div class="btnrow">
+            <!-- TODO: Replace with your real support email -->
+            <a class="btn" href="mailto:support@yourdomain.com?subject=MemoWall%20Support%20Request">Email Support</a>
+            <!-- Optional: link to your privacy page -->
+            <a class="btn" href="./privacy.html">Privacy Policy</a>
+          </div>
+
+          <div class="divider"></div>
+
+          <h2>Quick help</h2>
+          <ul>
+            <li><strong>Widget not updating?</strong> Try removing the widget and adding it again. Then restart Vision Pro.</li>
+            <li><strong>iCloud sync issues?</strong> Confirm you’re signed into iCloud and that iCloud Drive is enabled. Then reopen MemoWall.</li>
+            <li><strong>Premium not showing after purchase?</strong> Use “Restore Purchases” in the app, then relaunch.</li>
+            <li><strong>App crashes or freezes?</strong> Send us the steps to reproduce + your device model + visionOS version.</li>
+          </ul>
+
+          <div class="divider"></div>
+
+          <h2>Refunds & billing</h2>
+          <p>
+            Purchases and subscriptions are managed by Apple. For refunds or billing changes, use Apple’s purchase support flow.
+          </p>
+          <p>
+            If something looks wrong (missing Premium, duplicated charges), email us with your Apple ID purchase date and what you expected to happen.
+          </p>
+        </div>
+      </div>
+
+      <aside class="card">
+        <div class="inner">
+          <h2>When you contact support</h2>
+          <p>Including these details helps us fix issues faster:</p>
+
+          <div class="kv">
+            <div class="k">App version</div>
+            <div class="v">Found in MemoWall settings (or App Store listing).</div>
+
+            <div class="k">visionOS</div>
+            <div class="v">Your installed visionOS version.</div>
+
+            <div class="k">Board type</div>
+            <div class="v">Which board/theme you were using (if relevant).</div>
+
+            <div class="k">Steps</div>
+            <div class="v">Exact steps to reproduce the issue.</div>
+
+            <div class="k">Screenshots</div>
+            <div class="v">Attach screenshots or a short screen recording if possible.</div>
+          </div>
+
+          <div class="divider"></div>
+
+          <h2>FAQ</h2>
+          <ul>
+            <li><strong>Do I have to open the app to use it?</strong> Not always—MemoWall includes an interactive widget designed to stay useful even without constantly opening the full app.</li>
+            <li><strong>Does MemoWall collect personal data?</strong> See the <a href="./privacy.html">Privacy Policy</a> for details.</li>
+            <li><strong>Can I suggest a feature?</strong> Yes. Email support with “Feature Request” in the subject.</li>
+          </ul>
+
+          <div class="divider"></div>
+
+          <p style="margin:0;color:rgba(255,255,255,.55);font-size:12px;">
+            Tip: Put <code class="inline">[Bug]</code> or <code class="inline">[Billing]</code> in the email subject to speed up routing.
+          </p>
+        </div>
+      </aside>
+    </section>
+
+    <footer>
+      <!-- TODO: Update your name/company and year -->
+      © 2025 André Finetti Cangussu. All rights reserved.
+    </footer>
+  </div>
+</body>
+</html>
